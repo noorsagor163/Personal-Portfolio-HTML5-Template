@@ -1,0 +1,1960 @@
+/* 
+------------------
+Template Name: Perfolio
+Author: Themesitem
+Author Email: themesitem@gmail.com
+Version: 1
+Template Designer: Noor Mohammad
+------------------
+----------------
+Table of Content
+----------------
+        1. Newsletter Modal part
+        2. Navbar Part 
+        3. banner part
+        4. About part
+        5. Service part
+        6. Portfolio part
+        7. Experience part 
+        8. Work part
+        9. Testimonail part
+        10. Newsletter part
+        11. Brand part
+        12. Conatact part
+        13. Banner-chat Modal part
+        14. Banner-chat Modal2 part
+    
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*============Common CSS Start===============*/
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+@font-face {
+    src: url(../fonts/Ubuntu-Bold.ttf);
+    font-family: ub;
+}
+
+@font-face {
+    src: url(../fonts/Ubuntu-Medium.ttf);
+    font-family: um;
+}
+
+@font-face {
+    src: url(../fonts/Ubuntu-Regular.ttf);
+    font-family: ur;
+}
+
+@font-face {
+    src: url(../fonts/Ubuntu-light.ttf);
+    font-family: ul;
+}
+
+/*============Common CSS End===============*/
+
+/*=============Preloader Part CSS Start===================*/
+
+
+.preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fdfdfd;
+    z-index: 9999999999999;
+}
+
+.preloader img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.6);
+    -webkit-transform: translate(-50%, -50%) scale(.6);
+    -moz-transform: translate(-50%, -50%) scale(.6);
+    -o-transform: translate(-50%, -50%) scale(.6);
+}
+
+/*=============Preloader Part CSS End===================*/
+
+/*============NewsLetter Modal Part CSS Start===============*/
+
+.news-modal {
+    width: 800px;
+    padding: 40px 30px;
+    background: #fdfdfd;
+    text-align: center;
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    z-index: 111111111111111;
+    margin-top: 50px;
+    overflow: hidden;
+    display: none;
+}
+
+.cross-icon {
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background: linear-gradient(to right, #00BBFF, #0067E7);
+    -webkit-background: linear-gradient(to right, #00BBFF, #0067E7);
+    -moz-background: linear-gradient(to right, #00BBFF, #0067E7);
+    -o-background: linear-gradient(to right, #00BBFF, #0067E7);
+    box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    -moz-box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    -o-box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    border-radius: 50%;
+    padding-top: 4px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.cross-icon i {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fdfdfd;
+    line-height: 40px;
+    font-style: normal;
+}
+
+.news-modal h2 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 32px;
+    color: #222222;
+    text-transform: capitalize;
+    padding-top: 1px;
+    padding-bottom: 15px;
+}
+
+.news-modal .form-control {
+    border-radius: 0;
+    padding: 15px 0;
+    padding-left: 15px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    background: none;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 30px;
+}
+
+.news-modal textarea {
+    resize: none;
+}
+
+.news-modal-btn button {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 7px 20px;
+    background: linear-gradient(to right, #00BBFF, #0067E7);
+    -webkit-background: linear-gradient(to right, #00BBFF, #0067E7);
+    -moz-background: linear-gradient(to right, #00BBFF, #0067E7);
+    -o-background: linear-gradient(to right, #00BBFF, #0067E7);
+    box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    -moz-box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    -o-box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    border-radius: 30px;
+    border: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.news-modal-btn button:hover {
+    background: linear-gradient(to right, #0067E7, #00BBFF);
+    -webkit-background: linear-gradient(to right, #0067E7, #00BBFF);
+    -moz-background: linear-gradient(to right, #0067E7, #00BBFF);
+    -o-background: linear-gradient(to right, #0067E7, #00BBFF);
+}
+
+.bg3 {
+    background: rgba(0, 0, 0, .8);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11111111;
+    display: none;
+}
+
+/*=============NewsLetter Modal Part CSS End==============*/
+
+/*===============Navbar Part CSS Start===============*/
+
+#header {
+    background: #f5f5f5;
+    position: relative;
+    z-index: 11;
+}
+
+#particles_js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: none;
+}
+
+#header .side-text p {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 111px;
+    text-transform: uppercase;
+    color: #222222;
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    -webkit-transform: translateY(-50%) rotate(180deg);
+    -moz-transform: translateY(-50%) rotate(180deg);
+    -o-transform: translateY(-50%) rotate(180deg);
+    opacity: 0.05;
+    left: -20px;
+    margin: 0;
+}
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    padding: 20px 1rem;
+    padding-top: 24px;
+    z-index: 1111;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.sticky {
+    background: #F5F5F5;
+    box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+    -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+    -moz-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+    -o-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+}
+
+.sticky.navbar {
+    padding: 10PX 1rem;
+    position: fixed;
+    animation: sticky .7s;
+    -webkit-animation: sticky .7s;
+    -moz-animation: sticky .7s;
+    -o-animation: sticky .7s;
+    z-index: 111111111111;
+}
+
+@keyframes sticky {
+    from {
+        top: -50px;
+    }
+
+    to {
+        top: 0;
+    }
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #444444;
+    text-transform: capitalize;
+    position: relative;
+    z-index: 9;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.navbar-light .navbar-nav .nav-link:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.navbar-light .navbar-nav .nav-link:hover:before,
+.navbar-light .navbar-nav .nav-link.active:before {
+    height: 100%;
+    z-index: -111;
+}
+
+.sticky.navbar-light .navbar-nav .nav-link {
+    line-height: 30px;
+    color: #444;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: #00BBFF;
+}
+
+.sticky.navbar-light .navbar-nav .nav-link:hover,
+.sticky.navbar-light .navbar-nav .nav-link.active {
+    color: #00BBFF;
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+    padding: 0 15px;
+}
+
+.sticky.navbar-expand-md .navbar-nav .nav-link {
+    padding: 0 15px;
+}
+
+/* =============Navbar Part CSS End============= */
+
+
+/* ===============Banner Part CSS Start=========== */
+
+#banner {
+    padding-top: 30px;
+}
+
+.chat-form-main {
+    position: relative;
+}
+
+.chat-form {
+    position: absolute;
+    top: -465px;
+    left: -160px;
+    z-index: 1111;
+}
+
+.input-grpc {
+    position: relative;
+}
+
+.input-iconb {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    left: 140px;
+}
+
+.input-iconb i {
+    color: #454545;
+    font-size: 20px;
+    padding-top: 3px;
+    padding-left: 10px;
+}
+
+.input-grpc input {
+    width: 250px;
+    border: 0;
+    background: #fff;
+    border-radius: 20px;
+    padding: 8px 0;
+    padding-left: 18px;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.chat-form form button {
+    background: none;
+    border: 0;
+}
+
+.banner-person {
+    position: relative;
+}
+
+.banner-person:before {
+    position: absolute;
+    content: '';
+    width: 270px;
+    height: 10px;
+    top: 70px;
+    left: 30px;
+    background: linear-gradient(to right, #00BBFF, #0067E7);
+    -webkit-background: linear-gradient(to right, #00BBFF, #0067E7);
+    -moz-background: linear-gradient(to right, #00BBFF, #0067E7);
+    -o-background: linear-gradient(to right, #00BBFF, #0067E7);
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+.banner-person:after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 370px;
+    top: 70px;
+    right: 50px;
+    background: linear-gradient(#0066E7, #0067E8);
+    -webkit-background: linear-gradient(#0066E7, #0067E8);
+    -moz-background: linear-gradient(#0066E7, #0067E8);
+    -o-background: linear-gradient(#0066E7, #0067E8);
+    box-sizing: border-box;
+}
+
+.person-border:before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 150px;
+    top: 70px;
+    left: 30px;
+    background: #00BAFF;
+    box-sizing: border-box;
+}
+
+.person-border:after {
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 10px;
+    top: 430px;
+    right: 15%;
+    background: #006AE8;
+    z-index: -9;
+}
+
+.banner-chat {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    top: 165px;
+    left: -6px;
+    z-index: 111111111;
+    cursor: pointer;
+}
+
+.banner-chat i {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    font-size: 35px;
+    color: #00BBFF;
+}
+
+.bchat-close {
+    display: none;
+}
+
+.banner-chat img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.banner-text {
+    padding-top: 180px;
+}
+
+.banner-text p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 34px;
+    font-weight: 300;
+    color: #00BBFF;
+    margin: 0;
+}
+
+.banner-text h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 50px;
+    color: #00BBFF;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.banner-text h3 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #444444;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.banner-text h3 span {
+    padding: 0 7px;
+}
+
+.banner-btn {
+    margin-top: 40px;
+}
+
+.banner-btn a {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 15px 20px;
+    background: linear-gradient(to right, #00BBFF, #0067E7);
+    -webkit-background: linear-gradient(to right, #00BBFF, #0067E7);
+    -moz-background: linear-gradient(to right, #00BBFF, #0067E7);
+    -o-background: linear-gradient(to right, #00BBFF, #0067E7);
+    box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    -moz-box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    -o-box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    border-radius: 3px;
+}
+
+.banner-btn a:hover {
+    background: linear-gradient(to right, #0067E7, #00BBFF);
+    -webkit-background: linear-gradient(to right, #0067E7, #00BBFF);
+    -moz-background: linear-gradient(to right, #0067E7, #00BBFF);
+    -o-background: linear-gradient(to right, #0067E7, #00BBFF);
+}
+
+.chat-box-main {
+    position: relative;
+}
+
+.chat-box {
+    position: absolute;
+    width: 330px;
+    top: 90px;
+    left: -60px;
+}
+
+.chat-item p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    background: #fdfdfd;
+    display: inline-block;
+    padding: 0 18px;
+    margin: 5px 0;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .05);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .05);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .05);
+    -o-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .05);
+}
+
+.slick-current p {
+    opacity: 0.5;
+}
+
+.chat-mar-left {
+    margin-left: 140px;
+}
+
+.chat-mar-left2 {
+    margin-left: 65px;
+}
+
+.chat-mar-right {
+    margin-right: 50px;
+}
+
+.input-grpcu {
+    position: relative;
+    margin-top: 5px;
+    margin-left: 100px;
+}
+
+.input-grpcu input {
+    font-style: normal;
+}
+
+.input-grpcu .form-control {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .05);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .05);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .05);
+    -o-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .05);
+}
+
+.input-icon2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+}
+
+.input-icon2 i {
+    color: #454545;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.input-icon2 button {
+    background: none;
+    border: 0;
+}
+
+/*===============Banner Part CSS End============*/
+
+/*==============Banner Chat Modal Part CSS Start=============*/
+
+.bg {
+    background: rgba(0, 0, 0, .8);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 111;
+    display: none;
+}
+
+.bg2 {
+    background: rgba(0, 0, 0, .8);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11111;
+    display: none;
+}
+
+.banner-modal {
+    position: fixed;
+    bottom: 20px;
+    right: 130px;
+    width: 310px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 5px;
+    z-index: 1111111;
+    display: none;
+}
+
+.banner-modal2 {
+    position: absolute;
+    top: 160px;
+    left: 100px;
+    width: 310px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 5px;
+    z-index: 11111;
+    display: none;
+}
+
+.banner-modal-head {
+    background: linear-gradient(to right, #00BBFF, #0067E7);
+    -webkit-background: linear-gradient(to right, #00BBFF, #0067E7);
+    -moz-background: linear-gradient(to right, #00BBFF, #0067E7);
+    -o-background: linear-gradient(to right, #00BBFF, #0067E7);
+    text-align: center;
+    padding-top: 6px;
+    padding-bottom: 8px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.banner-modal-head h4 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.banner-modal-content {
+    padding: 20px;
+}
+
+.chat-person {
+    padding: 5px;
+}
+
+.chat-person img {
+    border-radius: 50%;
+}
+
+.chat-msg,
+.chat-msg2 {
+    background: #F1F1F1;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 30px
+}
+
+.chat-msg {
+    padding-left: 20px;
+}
+
+.chat-msg3 {
+    border-radius: 5px;
+    position: relative;
+    background: #F1F1F1;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 2px;
+    margin-top: 20px;
+}
+
+.banner-modal2 .chat-msg3 {
+    border-radius: 5px;
+    position: relative;
+    background: #F1F1F1;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    margin-top: 20px;
+    padding-left: 22px;
+}
+
+.chat-msg:before {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: #F1F1F1;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    -webkit-transform: translateY(-50%) rotate(-45deg);
+    -moz-transform: translateY(-50%) rotate(-45deg);
+    -o-transform: translateY(-50%) rotate(-45deg);
+    left: -8px;
+}
+
+.chat-msg2:before {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: #F1F1F1;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    -webkit-transform: translateY(-50%) rotate(-45deg);
+    -moz-transform: translateY(-50%) rotate(-45deg);
+    -o-transform: translateY(-50%) rotate(-45deg);
+    right: -8px;
+}
+
+.chat-msg3:before {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: #F1F1F1;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    -webkit-transform: translateY(-50%) rotate(-45deg);
+    -moz-transform: translateY(-50%) rotate(-45deg);
+    -o-transform: translateY(-50%) rotate(-45deg);
+    left: -8px;
+}
+
+.chat-msg p,
+.chat-msg2 p {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    color: #444444;
+    margin: 0;
+}
+
+.chat-msg3 i {
+    font-size: 30px;
+    color: #999999;
+    background: #F1F1F1;
+}
+
+.banner-modal-form {
+    border-top: 1px solid #f1f1f1;
+    padding: 20px;
+}
+
+.banner-modal-form form .form-control {
+    border-radius: 0px;
+    box-shadow: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    color: #999999;
+    height: 0;
+    border: 0;
+    padding-left: 0;
+}
+
+.input-grpm {
+    position: relative;
+}
+
+.input-grpm input {
+    width: 180px;
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    right: 0;
+}
+
+.input-icon i {
+    color: #454545;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.banner-modal-form form button {
+    background: none;
+    border: 0;
+}
+
+
+/*==============Banner Chat Modal Part CSS End============*/
+
+
+/*=================About Part CSS Start================*/
+
+#about {
+    padding-top: 115px;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+#about .side-text p {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 91px;
+    text-transform: uppercase;
+    color: #222222;
+    writing-mode: vertical-rl;
+    position: absolute;
+    height:100%;
+    top: 50%;
+    transform:translateY(-50%) rotate(180deg);
+    -webkit-transform:translateY(-50%) rotate(180deg);
+    -moz-transform:translateY(-50%) rotate(180deg);
+    -o-transform:translateY(-50%) rotate(180deg);
+    opacity: 0.05;
+    right: 0;
+    margin: 0;
+}
+
+.about-content {
+    margin-top: -22px;
+}
+
+.about-content h2 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 32px;
+    color: #222222;
+    text-transform: capitalize;
+}
+
+.about-content p {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #444444;
+    padding-top: 47px;
+    margin: 0;
+}
+
+.about-item-head h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #444444;
+    text-transform: capitalize;
+}
+
+.about-item-head h4 span {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #444444;
+    display: block;
+}
+
+.about-photo {
+    position: relative;
+    padding-top: 88px;
+}
+
+.small-person {
+    display: none;
+}
+
+.person {
+    position: absolute;
+    top: -3.3%;
+    left: 3.6%;
+}
+
+.about-item {
+    padding: 20px;
+    margin-top: 30px;
+    transition: all linear .3s;
+}
+
+.about-item:hover {
+    background: #f7f7f7;
+    box-shadow: 0px 6px 30px 0px #e3e3e3;
+    -webkit-box-shadow: 0px 6px 30px 0px #e3e3e3;
+    -moz-box-shadow: 0px 6px 30px 0px #e3e3e3;
+    -o-box-shadow: 0px 6px 30px 0px #e3e3e3;
+}
+
+/*============About Part CSS End==============*/
+
+
+/*==============Service Part CSS End==============*/
+
+#service {
+    background: #F5F5F5;
+    padding: 60px 0;
+    position: relative;
+}
+
+#service .side-text p {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 83px;
+    text-transform: uppercase;
+    color: #222222;
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    -webkit-transform: translateY(-50%) rotate(180deg);
+    -moz-transform: translateY(-50%) rotate(180deg);
+    -o-transform: translateY(-50%) rotate(180deg);
+    opacity: 0.05;
+    left: 0;
+    margin: 0;
+}
+
+.service-item {
+    padding: 30px;
+    position: relative;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.service-item:before {
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(#0067E7, #00BBFF);
+    -webkit-background: linear-gradient(#0067E7, #00BBFF);
+    -moz-background: linear-gradient(#0067E7, #00BBFF);
+    -o-background: linear-gradient(#0067E7, #00BBFF);
+    top: 0;
+    right: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    opacity: 0;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.service-item h3 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 24px;
+    color: #222222;
+    text-transform: capitalize;
+    margin: 0;
+    padding-top: 14px;
+}
+
+.service-item p {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    color: #444444;
+    padding-top: 25px;
+    margin: 0;
+}
+
+.service-item:hover {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 15px 2px #e5e5e5;
+    -webkit-box-shadow: 0px 0px 15px 2px #e5e5e5;
+    -moz-box-shadow: 0px 0px 15px 2px #e5e5e5;
+    -o-box-shadow: 0px 0px 15px 2px #e5e5e5;
+}
+
+.service-item:hover:before {
+    opacity: 1;
+}
+
+
+/*=============Service Part CSS End==============*/
+
+
+/*===============Portfolio Part CSS Start==============*/
+
+#portfolio {
+    padding-top: 92px;
+}
+
+.portfolio-head h2 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 32px;
+    color: #222222;
+    text-transform: capitalize;
+    margin: 0;
+    padding-bottom: 62px;
+}
+
+#portfolio button {
+    margin-bottom: 60px;
+    border: 0;
+    border-right: 2px solid #595959;
+    line-height: 17px;
+    padding: 0 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #595959;
+    text-transform: capitalize;
+    vertical-align: top;
+    cursor: pointer;
+    background: none;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.last-btn {
+    border-right: 0 !important;
+}
+
+button:focus {
+    outline: 0;
+}
+
+#portfolio button:hover {
+    color: #20C4FF;
+}
+
+#portfolio .active {
+    color: #20C4FF !important;
+}
+
+.portfolio-item {
+    width: 20%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.last-port {
+    display: none;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.portfolio-item:hover {
+    box-shadow: 0px 0px 15px 2px #9b9b9b;
+}
+
+.portfolio-item:hover .overlay {
+    top: 0;
+}
+
+.overlay-text {
+    position: relative;
+    top: 250%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.portfolio-item:hover .overlay-text {
+    top: 50%;
+}
+
+.overlay-text i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: #FEFEFE;
+    color: #20C4FF;
+    border-radius: 50%;
+}
+
+.overlay-text p {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #FEFEFE;
+    text-transform: capitalize;
+}
+
+.portfolio-btn {
+    margin-top: 42px;
+}
+
+.portfolio-btn a {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 15px 20px;
+    background: linear-gradient(to right, #00BBFF, #0067E7);
+    -webkit-background: linear-gradient(to right, #00BBFF, #0067E7);
+    -moz-background: linear-gradient(to right, #00BBFF, #0067E7);
+    -o-background: linear-gradient(to right, #00BBFF, #0067E7);
+    box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    -moz-box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    -o-box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    border-radius: 3px;
+}
+
+.portfolio-btn a:hover {
+    background: linear-gradient(to right, #0067E7, #00BBFF);
+    -webkit-background: linear-gradient(to right, #0067E7, #00BBFF);
+    -moz-background: linear-gradient(to right, #0067E7, #00BBFF);
+    -o-background: linear-gradient(to right, #0067E7, #00BBFF);
+}
+
+.mr0 {
+    margin-right: 0;
+}
+
+#portfolio .nav {
+    text-align: center !important;
+    display:inline-block;
+}
+
+#portfolio .nav-item {
+    text-align: center !important;
+    display:inline-block
+}
+
+#portfolio .nav-menu {
+    margin-bottom: 60px;
+    border: 0;
+    border-right: 2px solid #595959;
+    line-height: 17px;
+    padding: 0 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #595959;
+    text-transform: capitalize;
+    vertical-align: top;
+    cursor: pointer;
+    background: none;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+#portfolio .tab-content {
+    margin-top:54px;
+    margin-bottom:30px;
+}
+
+#portfolio .nav-menu:hover {
+    color: #20C4FF;
+}
+
+.last-btn {
+    border-right: 0 !important;
+}
+
+/*=============Portfolio Part CSS End===============*/
+
+/*=============Experience Part CSS Start============*/
+
+#experience {
+    padding-top: 104px;
+    padding-bottom: 99px;
+    position: relative;
+}
+
+#experience .side-text p {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 63px;
+    text-transform: uppercase;
+    color: #222222;
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 0;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    opacity: 0.05;
+    right: 0;
+    margin: 0;
+}
+
+.exper-head h2 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 32px;
+    color: #222222;
+    text-transform: capitalize;
+    margin: 0;
+    padding-bottom: 62px;
+}
+
+.exp-item-head {
+    position: relative;
+}
+
+.exper-slide-item {
+    background: #f5f5f5;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.exper-slide-item:before {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 0%;
+    bottom: 0%;
+    right: 0%;
+    background: linear-gradient(to right, #11bfff, #0068E7);
+    -webkit-background: linear-gradient(to right, #11bfff, #0068E7);
+    -moz-background: linear-gradient(to right, #11bfff, #0068E7);
+    -o-background: linear-gradient(to right, #11bfff, #0068E7);
+    border-radius: 3px;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+    z-index: -1;
+    clip-path: circle(64.5% at 74% 74%);
+    -webkit-clip-path: circle(64.5% at 74% 74%);
+    -moz-clip-path: circle(64.5% at 74% 74%);
+    -o-clip-path: circle(64.5% at 74% 74%);
+}
+
+.exper-slide-item:after {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 30px;
+    bottom: -12px;
+    right: -12px;
+    background: linear-gradient(to right, #11bfff, #0068E7);
+    border-radius: 50%;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.exper-slide-item:hover {
+    background: none;
+}
+
+.exp-item-head .exp-snd-logo {
+    display: none !important;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.exp-item-head .exp-frst-logo {
+    display: block !important;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.exper-slide-item:hover .exp-snd-logo {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+.exper-slide-item:hover .exp-frst-logo {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+.exper-slide-item:hover:before {
+    width: 100%;
+    height: 100%;
+    clip-path: circle(105.2% at 74% 74%);
+    -webkit-clip-path: circle(105.2% at 74% 74%);
+    -moz-clip-path: circle(105.2% at 74% 74%);
+    -o-clip-path: circle(105.2% at 74% 74%);
+}
+
+.exper-slide-item:hover:after {
+    opacity: 0;
+}
+
+.exp-item-head {
+    background: #EAEAEA;
+    padding: 50px 30px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+    transition-delay: .1s;
+}
+
+.exper-slide-item:hover .exp-item-head {
+    background: none;
+    box-shadow: 2px 0px 15px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 2px 0px 15px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 2px 0px 15px 0px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 2px 0px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.exper-slide-item:hover .exp-item-content h4,
+.exper-slide-item:hover .exp-item-content h5,
+.exper-slide-item:hover .exp-item-content p {
+    color: #fff;
+}
+
+.exp-item-head img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    display: inline-block !important;
+}
+
+.exp-item-content {
+    padding: 30px;
+}
+
+.exp-item-content h4 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #444444;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+    margin: 0;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.exp-item-content h5 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #444444;
+    text-transform: capitalize;
+    padding-bottom: 22px;
+    margin: 0;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.exp-item-content p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #444444;
+    margin: 0;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+
+/*============Experience Part CSS End============*/
+
+
+/*=============Work Part CSS Start===============*/
+
+#work {
+    background: linear-gradient(to right, #00BAFF, #0066E7);
+    -webkit-background: linear-gradient(to right, #00BAFF, #0066E7);
+    -moz-background: linear-gradient(to right, #00BAFF, #0066E7);
+    -o-background: linear-gradient(to right, #00BAFF, #0066E7);
+    padding-top: 23px;
+    padding-bottom: 24px;
+}
+
+.work-head h2 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 32px;
+    color: #fff;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.work-head ul li {
+    display: inline-block;
+}
+
+.work-head ul li {
+    margin-top: 30px;
+}
+
+.work-head ul li:last-child {
+    margin-left: 8px;
+}
+
+.know {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #00b3f4;
+    text-transform: capitalize;
+    padding: 15px 20px;
+    background: #fff;
+    border-radius: 3px;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.hire {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 15px 20px;
+    background: linear-gradient(to right, #00BBFF, #0067E7);
+    -webkit-background: linear-gradient(to right, #00BBFF, #0067E7);
+    -moz-background: linear-gradient(to right, #00BBFF, #0067E7);
+    -o-background: linear-gradient(to right, #00BBFF, #0067E7);
+    border-radius: 3px;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.know:hover {
+    background: linear-gradient(to right, #00BBFF, #0067E7);
+    -webkit-background: linear-gradient(to right, #00BBFF, #0067E7);
+    -moz-background: linear-gradient(to right, #00BBFF, #0067E7);
+    -o-background: linear-gradient(to right, #00BBFF, #0067E7);
+    color: #fff;
+}
+
+.hire:hover {
+    color: #00b3f4;
+    background: #fff;
+}
+
+.work-item {
+    text-align: center;
+}
+
+.work-item img {
+    padding-top: 5px;
+}
+
+.work-item h3 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    padding-top: 20px;
+    margin: 0;
+}
+
+.work-item h3 span {
+    font-size: 25px;
+}
+
+
+/*===============Work Part CSS End==============*/
+
+
+/*============Testimonial Part CSS End==============*/
+
+#testimonial {
+    padding-top: 92px;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+#testimonial .side-text p {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 71px;
+    text-transform: uppercase;
+    color: #222222;
+    writing-mode: vertical-rl;
+    position: absolute;
+    height:100%;
+    top: 50%;
+    transform:translateY(-50%) rotate(180deg);
+    -webkit-transform:translateY(-50%) rotate(180deg);
+    -moz-transform:translateY(-50%) rotate(180deg);
+    -o-transform:translateY(-50%) rotate(180deg);
+    opacity: 0.05;
+    left: 0;
+    margin: 0;
+}
+
+.test-head h2 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 32px;
+    color: #222222;
+    text-transform: capitalize;
+    padding-bottom: 62px;
+    margin: 0;
+}
+
+.test-slide-item {
+    background: #F5F5F5;
+}
+
+#testimonial .small {
+    display: none;
+}
+
+.test-item-content {
+    padding: 0 24px;
+}
+
+.test-item-content h3 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 18px;
+    line-height: 30px;
+    color: #222222;
+    padding-top: 18px;
+    padding-bottom: 15px;
+    margin: 0;
+}
+
+.test-item-content i {
+    color: #FEBB1C;
+    padding-bottom: 17px;
+}
+
+.test-item-content h4 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #222222;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.test-item-content p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #222222;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+
+/*=================Testimonial Part CSS End==============*/
+
+
+/*================Newspaper Part CSS Start==============*/
+
+.news-head h2 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 32px;
+    color: #222222;
+    padding-top: 93px;
+    padding-bottom: 25px;
+    margin: 0;
+}
+
+.form-control {
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -o-border-radius: 20px;
+    border: 1px solid #F5F5F5;
+    box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, .1);
+    -webkit-box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, .1);
+    -o-box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, .1);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    font-style: italic;
+    color: #999999;
+    height: 0;
+    padding: 20px 0;
+    padding-left: 20px;
+}
+
+.form-control:focus {
+    border: 1px solid transparent;
+    box-shadow: 0px 7px 20px 2px rgba(0, 0, 0, .1);
+    -webkit-box-shadow: 0px 7px 20px 2px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0px 7px 20px 2px rgba(0, 0, 0, .1);
+    -o-box-shadow: 0px 7px 20px 2px rgba(0, 0, 0, .1);
+}
+
+.news-form {
+    padding-bottom: 98px;
+}
+
+.news-btn button {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 7px 20px;
+    background: linear-gradient(to right, #00BBFF, #0067E7);
+    -webkit-background: linear-gradient(to right, #00BBFF, #0067E7);
+    -moz-background: linear-gradient(to right, #00BBFF, #0067E7);
+    -o-background: linear-gradient(to right, #00BBFF, #0067E7);
+    box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    -moz-box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    -o-box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    border-radius: 30px;
+    border: none;
+}
+
+.news-btn button:hover {
+    background: linear-gradient(to right, #0067E7, #00BBFF);
+    -webkit-background: linear-gradient(to right, #0067E7, #00BBFF);
+    -moz-background: linear-gradient(to right, #0067E7, #00BBFF);
+    -o-background: linear-gradient(to right, #0067E7, #00BBFF);
+}
+
+
+/*==============Newspaper Part CSS End=============*/
+
+
+/*================Brand Part CSS Start===========*/
+
+.brand-item {
+    padding: 30px;
+}
+
+.brand-item img {
+    transform: scale(.8);
+    -webkit-transform: scale(.8);
+    -moz-transform: scale(.8);
+    -o-transform: scale(.8);
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -o-filter: grayscale(1);
+    opacity: .5;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.brand-item:hover img {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    -o-filter: grayscale(0);
+    opacity: 1;
+}
+
+.brand-bottom {
+    position: relative;
+}
+
+.brand-bottom:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background: #DDDDDD;
+}
+
+.brand-right {
+    position: relative;
+}
+
+.brand-right:after {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #DDDDDD;
+}
+
+
+/*===============Brand Part CSS End===================*/
+
+
+/*==============Contact Part CSS Start=============*/
+
+#contact {
+    background: #F5F5F5;
+    padding-top: 60px;
+    position: relative;
+}
+
+#contact .side-text p {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 85px;
+    text-transform: uppercase;
+    color: #222222;
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    -webkit-transform: translateY(-50%) rotate(180deg);
+    -moz-transform: translateY(-50%) rotate(180deg);
+    -o-transform: translateY(-50%) rotate(180deg);
+    opacity: 0.05;
+    right: 0;
+    margin: 0;
+}
+
+.contact-head {
+    padding-bottom: 50px;
+}
+
+.contact-head p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #444444;
+    padding-top: 24px;
+    padding-bottom: 50px;
+    margin: 0;
+}
+
+.contact-head h3 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 24px;
+    color: #222222;
+    padding-bottom: 5px;
+    margin: 0;
+}
+
+.contact-head a {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #444444;
+}
+
+.contact-social {
+    position: relative;
+}
+
+.footer-chat {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(to right, #00BBFF, #0067E7);
+    -webkit-background: linear-gradient(to right, #00BBFF, #0067E7);
+    -moz-background: linear-gradient(to right, #00BBFF, #0067E7);
+    -o-background: linear-gradient(to right, #00BBFF, #0067E7);
+    box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    -moz-box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    -o-box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    border-radius: 50%;
+    bottom: 20px;
+    right: 20px;
+    z-index: 11111;
+    cursor: pointer;
+    display: none;
+}
+
+.footer-chat i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    font-size: 35px;
+    color: #fdfdfd;
+}
+
+.chat-close {
+    display: none;
+}
+
+.social {
+    background: #f5f5f5;
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    padding: 0 20px;
+}
+
+.social ul li {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.social ul li a i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #DDDDDE;
+    border-radius: 50%;
+    color: #999999;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.social ul li a i:hover {
+    border: 1px solid transparent;
+    background: linear-gradient(to right, #00BBFF, #0067E7);
+    -webkit-background: linear-gradient(to right, #00BBFF, #0067E7);
+    -moz-background: linear-gradient(to right, #00BBFF, #0067E7);
+    -o-background: linear-gradient(to right, #00BBFF, #0067E7);
+    color: #fff;
+    box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    -moz-box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+    -o-box-shadow: 0px 0px 50px 0px rgba(0, 146, 243, .3);
+}
+
+#footer {
+    background: #f5f5f5;
+    border-top: 1px solid #DDDDDD;
+    padding-top: 50px;
+}
+
+#footer p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #444444;
+    margin: 0;
+}
+
+#footer p a {
+    color: #444;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+#footer p a:hover {
+    color: #00ACFB;
+}
+
+/*==============Contact Part CSS End==============*/
